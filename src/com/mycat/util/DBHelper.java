@@ -10,13 +10,13 @@ import java.util.Properties;
 public class DBHelper {
 	public static Connection connect() {
 		String driverClassName = "com.mysql.jdbc.Driver";
-		String url = "jdbc:mysql://120.78.219.119:3306/MyCat?useUnicode=true&characterEncoding=utf8";
+		String url = "jdbc:mysql://127.0.0.1:3306/MyCat?useUnicode=true&characterEncoding=utf8";
 
 		try {
 			Class.forName(driverClassName);
 			Properties pro = new Properties();
 
-			Connection con = DriverManager.getConnection(url, "root", "EDB0bd8cb80d");
+			Connection con = DriverManager.getConnection(url, "root", "root123");
 
 			return con;
 		} catch (Exception ex) {
